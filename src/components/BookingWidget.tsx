@@ -10,8 +10,8 @@ export function BookingWidget() {
   return (
     <div className="relative -mt-20 z-20 px-8 w-full max-w-[1200px] mx-auto">
       <Card className="bg-white rounded-xl shadow-lg border-0 p-6">
-        <Tabs defaultValue="round" className="w-full">
-          <TabsList className="bg-transparent border-b border-gray-100 rounded-none w-full justify-start h-12 p-0 mb-6 space-x-8">
+        <Tabs defaultValue="round" className="w-full flex flex-col gap-0">
+          <TabsList className="bg-transparent border-b border-gray-100 rounded-none w-full justify-start h-12 p-0 mb-8 space-x-8 flex flex-row">
             <TabsTrigger 
               value="round" 
               className="data-[state=active]:border-b-2 data-[state=active]:border-red-700 data-[state=active]:shadow-none data-[state=active]:bg-transparent rounded-none px-0 font-semibold text-gray-500 data-[state=active]:text-red-700 pb-3"
