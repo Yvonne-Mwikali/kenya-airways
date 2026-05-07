@@ -4,17 +4,16 @@ import { Plane } from "lucide-react"
 
 export function PromoSection() {
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-8 pb-20">
+    <div className="w-full  px-8 pb-20">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         
         {/* Asante Rewards Banner */}
-        <Card className="relative overflow-hidden bg-[#1a1a1a] text-white p-8 border-0 min-h-[250px] flex flex-col justify-center rounded-xl">
-          {/* Fake window background */}
-          <div className="absolute right-0 top-0 bottom-0 w-[50%] bg-gradient-to-l from-orange-500/20 to-transparent">
-            <div className="absolute right-4 top-1/2 -translate-y-1/2 w-48 h-64 border-[10px] border-[#2a2a2a] rounded-[60px] bg-gradient-to-b from-orange-200 to-orange-400 opacity-60 overflow-hidden shadow-inner">
-              <div className="absolute inset-0 bg-white/20 blur-sm" />
-            </div>
-          </div>
+        <Card 
+          className="relative overflow-hidden text-white p-8 border-0 min-h-[250px] flex flex-col justify-center rounded-xl bg-cover bg-center shadow-lg"
+          style={{ backgroundImage: 'url(/Asante.jpeg)' }}
+        >
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent pointer-events-none" />
           
           <div className="relative z-10 max-w-[60%]">
             <div className="text-yellow-500 text-sm font-semibold mb-2">Asante Rewards</div>
@@ -22,7 +21,7 @@ export function PromoSection() {
             <p className="text-gray-300 text-sm mb-6 leading-relaxed">
               Join Asante Rewards and enjoy exclusive benefits every time you fly.
             </p>
-            <Button variant="outline" className="border-gray-500 text-black hover:bg-white hover:text-black transition-colors rounded-none px-6">
+            <Button variant="outline" className=" ext-yellow-500   rounded-none px-6 border border-yellow-500">
               Join Now
             </Button>
           </div>
