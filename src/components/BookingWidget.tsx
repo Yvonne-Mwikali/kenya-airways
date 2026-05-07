@@ -3,39 +3,40 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 
-import { MapPin, ArrowRightLeft, CalendarIcon, User, ChevronDown } from "lucide-react"
+import { MapPin, ArrowRightLeft, CalendarIcon, User, ChevronDown, Plane, Waypoints } from "lucide-react"
 
 export function BookingWidget() {
 
   return (
-    <div className="relative -mt-20 z-20 px-8 w-full max-w-[1200px] mx-auto">
-      <Card className="bg-white rounded-xl shadow-lg border-0 p-6">
+    <div className="relative -mt-20 z-20 px-8 w-full">
+      <Card className="bg-white rounded-xl shadow-[0_24px_60px_-15px_rgba(0,0,0,0.2)] border border-gray-100 border-b-2 border-b-gray-200 p-6">
         <Tabs defaultValue="round" className="w-full flex flex-col gap-0">
-          <TabsList className="bg-transparent border-b border-gray-100 rounded-none w-full justify-start h-12 p-0 mb-8 space-x-8 flex flex-row">
+          <TabsList className="bg-transparent border-b border-gray-200 rounded-none w-full justify-start h-12 p-0 mb-8 space-x-8 flex flex-row">
             <TabsTrigger 
               value="round" 
-              className="data-[state=active]:border-b-2 data-[state=active]:border-red-700 data-[state=active]:shadow-none data-[state=active]:bg-transparent rounded-none px-0 font-semibold text-gray-500 data-[state=active]:text-red-700 pb-3"
+              className="data-[state=active]:border-b-2 data-[state=active]:border-red-700 data-[state=active]:shadow-none data-[state=active]:bg-transparent rounded-none px-0 font-semibold text-gray-500 data-[state=active]:text-red-700 pb-3 -mb-[1px]"
             >
               <ArrowRightLeft className="w-4 h-4 mr-2" />
               Round Trip
             </TabsTrigger>
             <TabsTrigger 
               value="one"
-              className="data-[state=active]:border-b-2 data-[state=active]:border-red-700 data-[state=active]:shadow-none data-[state=active]:bg-transparent rounded-none px-0 font-semibold text-gray-500 data-[state=active]:text-red-700 pb-3"
+              className="data-[state=active]:border-b-2 data-[state=active]:border-red-700 data-[state=active]:shadow-none data-[state=active]:bg-transparent rounded-none px-0 font-semibold text-gray-500 data-[state=active]:text-red-700 pb-3 -mb-[1px]"
             >
+              <Plane className="w-4 h-4 mr-2" />
               One Way
             </TabsTrigger>
             <TabsTrigger 
               value="multi"
-              className="data-[state=active]:border-b-2 data-[state=active]:border-red-700 data-[state=active]:shadow-none data-[state=active]:bg-transparent rounded-none px-0 font-semibold text-gray-500 data-[state=active]:text-red-700 pb-3"
+              className="data-[state=active]:border-b-2 data-[state=active]:border-red-700 data-[state=active]:shadow-none data-[state=active]:bg-transparent rounded-none px-0 font-semibold text-gray-500 data-[state=active]:text-red-700 pb-3 -mb-[1px]"
             >
+              <Waypoints className="w-4 h-4 mr-2" />
               Multi-city
             </TabsTrigger>
           </TabsList>
 
           <div className="flex flex-col lg:flex-row gap-4 items-end mb-6 w-full">
             
-            {/* From & To (35%) */}
             <div className="flex w-full lg:w-[35%] gap-2 relative items-end">
               <div className="flex-1">
                 <label className="text-xs font-medium text-gray-500 mb-1 block">From</label>
@@ -106,7 +107,7 @@ export function BookingWidget() {
 
           </div>
 
-          <div className="flex items-center justify-between border-t pt-4">
+          <div className="flex items-center justify-between border-t border-gray-100 pt-4">
             <div className="flex items-center gap-4 text-sm">
               <span className="font-semibold text-gray-600">Recent searches:</span>
               <div className="flex gap-4 text-gray-500">
