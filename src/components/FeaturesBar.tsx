@@ -30,13 +30,13 @@ export function FeaturesBar() {
   ]
 
   return (
-    <div className="w-full max-w-[1200px] mx-auto px-8 py-10">
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-6 border-b border-gray-100 pb-10">
+    <div className="w-full px-8 py-10">
+      <div className="flex flex-col md:flex-row justify-between w-full border-b border-gray-100 pb-10">
         {features.map((feature, i) => (
-          <div key={i} className="flex gap-4 items-start">
+          <div key={i} className={`flex gap-4 items-start flex-1 ${i !== features.length - 1 ? 'md:border-r md:border-gray-200' : ''} px-4 md:px-6 first:pl-0 last:pr-0`}>
             <div className="mt-1">{feature.icon}</div>
             <div>
-              <h4 className="font-bold text-sm text-gray-900">{feature.title}</h4>
+              <h4 className="font-bold text-sm text-gray-900 leading-tight">{feature.title}</h4>
               <p className="text-xs text-gray-500 mt-1">{feature.desc}</p>
             </div>
           </div>
